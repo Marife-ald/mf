@@ -3,4 +3,5 @@
 ## Ejercicios Marife
 
 enlace a ejercicios
+- [EJERCICIO 2](docs/ut1-ej1.pdf)
 
