@@ -4,6 +4,5 @@ class SaveUsernameUseCase ( private val loginRepository: LoginRepository) {
     operator fun invoke (username: String) {
         loginRepository.saveUsername(username)
     }
-    fun
 
 }
