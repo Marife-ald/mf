@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">MF1</string>
-    <string name="label_login">Identificación de usuarios</string>
+    <string name="label_login">IDENTIFICACION DE USUARIOS</string>
+    <string name="label_usuario">Usuario</string>
+    <string name="label_password">Contraseña</string>
+    <string name="label_inicio_sesion">Entrar</string>
+    <string name="mensaje_login_mal">las credenciales no son correctas</string>
+    <string name="mensaje_login_ok">las credenciales son correctas</string>
+
 </resources>
