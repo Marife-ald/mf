@@ -2,6 +2,7 @@ package com.example.mf1.features.login.presentation
 
 import android.os.Bundle
 import android.widget.Button
+import android.widget.CheckBox
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import com.example.mf1.R
@@ -13,7 +14,7 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var  loginViewModel: LoginViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        loginFactory = LoginFactory()
+        loginFactory = LoginFactory(this)
         loginViewModel = loginFactory.provideLoginViewModel()
         setContentView(R.layout.activity_login)
         setupview()
@@ -24,6 +25,7 @@ class LoginActivity : AppCompatActivity() {
            val userName=findViewById<EditText>(R.id.input_user).text.toString()
             val pass=findViewById<EditText>(R.id.input_password).text.toString()
             val isValid = loginViewModel.validateClicked(userName,pass)
+            val rememberIsChecked = findViewById<CheckBox>(R.id.check_remember).isChecked
             if (isValid) {
                 Snackbar.make(
                     findViewById(R.id.main),

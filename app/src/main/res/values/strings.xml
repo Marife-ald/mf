@@ -6,5 +6,6 @@
     <string name="label_inicio_sesion">Entrar</string>
     <string name="mensaje_login_mal">las credenciales no son correctas</string>
     <string name="mensaje_login_ok">las credenciales son correctas</string>
+    <string name="label_remember_username">Recordar el nombre de usuario</string>
 
 </resources>
