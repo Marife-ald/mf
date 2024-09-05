@@ -7,5 +7,11 @@
     <string name="mensaje_login_mal">las credenciales no son correctas</string>
     <string name="mensaje_login_ok">las credenciales son correctas</string>
     <string name="label_remember_username">Recordar el nombre de usuario</string>
+    <string name="hazte_socio">Hazte socio</string>
+    <string name="cuota">colabora donando una cantidad fija durante X tiempo</string>
+    <string name="donacion">Haz una donación</string>
+    <string name="teaming">TEAMING</string>
+    <string name="un_euro">Colabora con nosotros con 1€ al mes</string>
+    <string name="colabora">COLABORA</string>
 
 </resources>
