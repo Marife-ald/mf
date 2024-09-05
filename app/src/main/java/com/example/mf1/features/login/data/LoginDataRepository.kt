@@ -12,6 +12,9 @@ class LoginDataRepository (
         return remoteDataSource.validate(userName, pass)
     }
     override fun saveUsername(userName: String) {
-
+        localDataSource.saveUsername(userName)
+    }
+    override fun getUsername() : String? {
+        return localDataSource.getUsername()
     }
 }

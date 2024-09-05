@@ -9,4 +9,8 @@ class LoginXmlDataSource (private val context: Context){
         editor.putString("username",userName)
         editor.commit()
     }
+    fun getUsername(): String? {
+        return sharedPref.getString("username",null)
+    }
+
 }

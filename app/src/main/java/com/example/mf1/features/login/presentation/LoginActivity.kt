@@ -21,11 +21,12 @@ class LoginActivity : AppCompatActivity() {
         }
     private fun setupview() {
         val actionValidate = findViewById<Button>(R.id.action_validate)
+
         actionValidate.setOnClickListener {
+            val isRemembered = findViewById<CheckBox>(R.id.check_remember).isChecked
            val userName=findViewById<EditText>(R.id.input_user).text.toString()
             val pass=findViewById<EditText>(R.id.input_password).text.toString()
-            val isValid = loginViewModel.validateClicked(userName,pass)
-            val rememberIsChecked = findViewById<CheckBox>(R.id.check_remember).isChecked
+            val isValid = loginViewModel.validateClicked(userName,pass,isRemembered)
             if (isValid) {
                 Snackbar.make(
                     findViewById(R.id.main),
@@ -39,7 +40,14 @@ class LoginActivity : AppCompatActivity() {
                     Snackbar.LENGTH_SHORT
                 ).show()
             }
-            loginViewModel.validateClicked(userName,pass)
+
+        }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        loginViewModel.onResumed()?.let { username->
+            findViewById<EditText>(R.id.input_user).setText(username)
         }
     }
 }
